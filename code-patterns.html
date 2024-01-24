@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-okaidia.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    
+    <!-- Favicons -->
+    
+    <title>Code Writing Patterns</title>
+</head>
+<body class="">
+</code></pre>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__wrapper-info">
+                    <h1>Documentation/Guide</h1>
+                </div>
+                <a href="./" class="header__wrapper-logo">
+                    <img src="./assets/images/svg/logo.svg" alt="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="page" class="page">
+    
+        
+        <section class="navbar">
+            <div class="container">
+                <div class="navbar__list">
+                    <a href="./" class="navbar__list-back">
+                        <svg><use xlink:href="assets/images/svg/sprite.svg#arrowLeft"></use></svg>
+                        <span>Back</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <main class="documentation">
+            <div class="container">
+                <div class="documentation__item">
+                    <h2>Code Writing Patterns</h2>
+                    <p>
+                        This page is intended to showcase selected and frequently used code solutions in the project for the purpose of <strong>standardization</strong> and maintaining a <strong>unified coding style</strong>.
+                    </p>
+                    <p>As a result, increased predictability and reduced time for understanding the developed functionality are expected.</p>
+                </div>
+                <div class="documentation__item">
+                    <h2>Icon Declaration Template</h2>
+                    <p>
+                        For precise styling of the icon based on its state, the class <strong>.i-background</strong> is used, which has modification classes <strong>--fill, --stroke</strong>.
+                        These modification classes are used to orient in <strong>CSS</strong> styling and are applied only to dynamic icon tags. They can also be used together.
+                    </p>
+                    <textarea class="documentation__item-code" rows="12" id="codeIconsTemplate" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Endpoint Declaration Template</h2>
+                    <p>
+                        <strong>End-points</strong> are declared through the <strong>$axios</strong> key from the <strong>nuxt</strong> context. The first argument needs to be specified as an object with all the necessary parameters.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p><strong>End-points</strong> are declared only in <strong>action</strong> functions in <strong>store</strong> files.</p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="6" id="codeEndPointTemplate" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Props Declaration Template</h2>
+                    <p>
+                        To declare <strong>props</strong> in the project, the <strong>VueTypes</strong> plugin is used. It allows specifying the necessary data for the <strong>props</strong> in a compact single line.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p><strong>Advantage:</strong> Compactness</p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="7" id="codePropsTemplate" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Getters Declaration Template</h2>
+                    <p>
+                        Data from the <strong>store</strong> should be accessed in the component using the following format, utilizing the spread operator for the auxiliary function <strong>mapGetters</strong>.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> This notation allows easily understanding from which <strong>store</strong> file the data is being accessed.
+                        </p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="8" id="codeMapGetters" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Action Declaration Template</h2>
+                    <p>
+                        <strong>Action</strong> functions should be called directly from the component context.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> This allows easily distinguishing an <strong>action</strong> function from a regular component method, speeding up debugging.
+                        </p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="1" id="codeMapAction" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Mutations Declaration Template</h2>
+                    <p><strong>Mutation</strong> functions are declared in uppercase and separated by an underscore. They are used exclusively within <strong>store</strong> files!</p>
+                    <textarea class="documentation__item-code" rows="3" id="codeStoreMutation" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>CSS Styles Declaration Template</h2>
+                    <p><strong>CSS</strong> styles are declared in <strong>.scss</strong> files, and component-specific styles are declared only in cases of extreme necessity.</p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>This approach maintains order in the project and eliminates conflicts in style priorities.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="footer">
+        
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

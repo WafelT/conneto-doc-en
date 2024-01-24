@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism-okaidia.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    
+    <!-- Favicons -->
+    
+    <title>Documentation Frontend</title>
+</head>
+<body class="">
+</code></pre>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__wrapper-info">
+                    <h1>Documentation/Guide</h1>
+                </div>
+                <a href="./" class="header__wrapper-logo">
+                    <img src="./assets/images/svg/logo.svg" alt="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="page" class="page">
+    
+        
+        <section class="navbar">
+            <div class="container">
+                <div class="navbar__list">
+                    <a href="./code-patterns.html" class="navbar__list-link">
+                        <span>Code Writing Patterns</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <main class="documentation">
+            <div class="container">
+                <div class="documentation__item">
+                    <h2>General Code Writing Guidelines</h2>
+                    <ul>
+                        <li>Variables for functions, methods, and data should be declared in camelCase format.</li>
+                        <li>All variable names should be written in English without grammatical faults and should clearly reflect the meaning of the entity.</li>
+                        <li>Indentation: 4 spaces.</li>
+                        <li>BEM methodology should be used in developing the markup.</li>
+                        <li>Elastic layout is used; all values in px should be converted to vw (handled by the <strong>‎ px2vw ‎</strong> SCSS function) with some exceptions.</li>
+                    </ul>
+                </div>
+        
+                <div class="documentation__item">
+                    <h2>Working with Vue Components</h2>
+                    <p>
+                        Components are imported using arrow functions in the <strong>components</strong> key object. 
+                        Global <strong>UI components</strong> from the <strong>/ui</strong> directory do not need to be imported; they are imported by default.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> This notation is compact and meaningful, allowing you to avoid unnecessary code clutter in the component file.
+                        </p>
+                    </div>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Recommendation:</strong> Try to separate imports of components with an empty line, grouping them for better readability.
+                        </p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="10" id="codeComponentImports" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
+                    <h2>Vuex | Working with Store</h2>
+                    <p>
+                        Created new store file should following the schema steps <strong>getters, mutations, actions</strong>, should be used as depicted in the schema. 
+                        All requests to the <strong>Backend API</strong> should be defined only in the <strong>action functions</strong> of the store.
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> Proper pattern for building architecture is followed, adhering to the single responsibility principle. Components remain clean and are easily maintainable.
+                        </p>
+                    </div>
+                    <a target="_blank" href="https://vuex.vuejs.org/#what-is-a-state-management-pattern">
+                        <img src="./assets/images/vuex-scheme.png" alt="vuex-scheme">
+                    </a>
+                </div>
+                <div class="documentation__item">
+                    <h2>Working with SVG</h2>
+                    <p>Adding new icons to the project is done exclusively through the <strong>sprite.svg</strong> file <br>(except for components like icons, whose styles are not applied through the sprite).</p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> Using SVG sprites provides a more flexible and efficient management of graphical elements, facilitating their development, maintenance, and optimization.
+                        </p>
+                    </div>
+                </div>
+                <div class="documentation__item">
+                    <h2>Working with Language Files</h2>
+                    <p>Changes to language files are carried out in batches, and language files are supplemented or modified <strong>strictly based</strong> on tasks related to updating static files.</p>
+                    <p>
+                        The first step involves identifying the new additions or changes in the <strong>en.js</strong> file. Afterward, they are converted into a <strong>.xml</strong> file and sent to the client. The client returns a <strong>.xml</strong> file,
+                        which is then converted back into <strong>.js</strong> and added to the end of the file with the corresponding language. Additionally, the version in the file is updated. New translation fields should be declared in the <strong>camelCase</strong> format,
+                        without nested structures, as follows:
+                    </p>
+                    <textarea class="documentation__item-code" rows="3" id="codeLanguageImport" cols="30" disabled></textarea>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p>
+                            <strong>Advantage:</strong> Since there are many language files, using such a strategy for synchronizing fields and changes is preferable. It helps eliminate discrepancies in the files.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="footer">
+        
+        </footer>
+    </div>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
