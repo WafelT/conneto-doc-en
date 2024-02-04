@@ -259,7 +259,7 @@ input:focus, textarea:focus, button:focus {
   min-height: initial;
   font-size: 16px;
   line-height: 143%;
-  font-family: "Consolas";
+  font-family: "Source Code Pro", monospace;
 }
 .documentation__item-attention {
   display: flex;

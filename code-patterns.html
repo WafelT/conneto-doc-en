@@ -64,6 +64,22 @@
                     <p>As a result, increased predictability and reduced time for understanding the developed functionality are expected.</p>
                 </div>
                 <div class="documentation__item">
+                    <h2>Toast Message Declaration Template</h2>
+                    <p>
+                        The <strong>Toast</strong> message is declared on the page of exploitation, via <strong>MyToast</strong> component, it get's a unique <strong>name</strong> parameter,
+                        the calling of message is executed from <strong>eventBus</strong> using his <strong>$emit</strong>
+                    </p>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p><strong>An exception</strong> is the <strong>Toast</strong> message used to display unsuccessful responses from the server that are not included in the scenarios for using the functionality, in this case we can directly access the <strong>$toast</strong> object</p>
+                    </div>
+                    <div class="documentation__item-attention">
+                        <img src="./assets/images/svg/attention-icon.svg" alt="attention-icon">
+                        <p><strong>Explanations:</strong> for example, <strong>Toast</strong> message of permissions absence are declared through the component since this is a part of expected script of usage, errors from <strong>try/catch</strong> are triggered in case of invalid response, so they are called using the <strong>$toast</strong> object</p>
+                    </div>
+                    <textarea class="documentation__item-code" rows="19" id="codeToastMessagesTemplate" cols="30" disabled></textarea>
+                </div>
+                <div class="documentation__item">
                     <h2>Icon Declaration Template</h2>
                     <p>
                         For precise styling of the icon based on its state, the class <strong>.i-background</strong> is used, which has modification classes <strong>--fill, --stroke</strong>.
