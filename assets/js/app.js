@@ -107,14 +107,14 @@ document.querySelector('#codeToastMessagesTemplate').value =
 if (document.querySelector('#codeExampleUsingLocalizationCommentLogic')) {
 document.querySelector('#codeExampleUsingLocalizationCommentLogic').value = 
 `else if(this.form.invitedUsers.includes(this.profileData.email)) {
-    this.messages.push("You have entered the document owner's email.") // TTS
+    this.messages.push("You have entered the document owner's email.") // TTL
     return
 }`
 }
     
 if (document.querySelector('#codeExampleUsingLocalizationCommentLayout')) {
 document.querySelector('#codeExampleUsingLocalizationCommentLayout').value = 
-`<!-- TTS -->
+`<!-- TTL -->
 <h4>The Title of Modal</h4>
 <button @click="closeModal()" class="modal__content-header-close">
     <svg><use xlink:href="@/assets/images/svg/sprite.svg#closeIcon"></use></svg>
